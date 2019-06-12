@@ -11,9 +11,9 @@ SELECT v.placa,
 	   ma.nome AS marca,
 	   p. nome AS proprietario
 
-FROM veiculo veiculo
+FROM veiculo v 
 
-JOIN cor c ON (m.id = v.id_cor)
+JOIN cor c ON (c.id = v.id_cor)
 JOIN modelo m ON (m.id = v.id_modelo)
 JOIN marca ma ON (ma.id = m.id_marca)
 JOIN proprietario p ON (P.id = v.id_proprietario)
@@ -31,9 +31,9 @@ SELECT m.lancamento,
 
 FROM multa m 
 
-JOIN veiculo v ON (v.id = m m.id_veiculo)
+JOIN veiculo v ON (v.id = m.id_veiculo)
 JOIN proprietario p ON (p.id = v.id_proprietario)
-JOIN infracao i ON (i.id = m.id_infrcao);
+JOIN infracao i ON (i.id = m.id_infracao);
 
 
 SELECT m.lancamento,
@@ -51,8 +51,6 @@ JOIN proprietario p ON (p.id = v.id_proprietario)
 JOIN infracao i ON (i.id = m.id_infracao);
 
 GROUP BY p.id; 	
-
-
 
 
 

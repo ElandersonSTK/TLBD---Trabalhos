@@ -26,5 +26,6 @@ FROM proprietario p
 JOIN veiculo v ON (p.id = v.id_proprietario)
 JOIN multa m ON (m.id_veiculo = v.id)
 JOIN infracao i ON (i.id = m.id_infracao)
-GROUP BY p.id; -- Matéria nova: "GROUP BY"	   
+GROUP BY p.id; -- Matéria nova: "GROUP BY"
+	   
 		
